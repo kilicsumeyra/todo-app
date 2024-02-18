@@ -1,0 +1,149 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Bebas Neue", sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #eb7e90;
+    
+}
+.container{
+    width: 90vw;
+    max-width: 600px;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: #eea0ad;
+    border-radius: 25px;
+    box-shadow: 0px 0px 20px rgba(186, 89, 216, 0)
+}
+header{
+    font-size: 2rem;
+    letter-spacing: 0.75rem;
+    color:#f32648;
+    text-align: center;
+    padding: 1rem;
+    text-shadow: 2px 2px 4px rgba(212, 75, 98, 0);
+}
+
+.todo-add{
+    width: 90%;
+    display: flex;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #f32648;
+}
+
+#todo-input{
+    width: 80%;
+    margin-right: 10px;
+    border-color:#eea0ad;
+    border-radius: 5px;
+    outline:none;
+    padding: 0.5rem;
+    transition: border 0.3s ease-in-out;
+    
+
+}
+#todo-input:focus{
+    border: 2px solid#ec546e;
+}
+
+
+
+#todo-button{
+   width:20% ;
+   padding: 0.7rem;
+   background-color:#ffe6ea;
+   color:#f32648;
+   font-size: 1rem;
+   font-weight: bold;
+   border-radius: 5px;
+   border: none;
+   cursor:pointer;
+   transition: background-color 0.3s ease-in-out;
+
+}
+
+#todo-button:hover{
+    background-color:#f76d84
+}
+
+.todos{
+    width: 90%;
+    margin-top: 2rem;
+    overflow-y: auto;
+    overflow-x:hidden;
+
+}
+
+.todos ul{
+    list-style: none;
+}
+ul li {
+    background-color: #f4f4f4;
+    color: #ff758c;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    /* border: 5px solid pink; */
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in;
+}
+
+ul li:nth-child(even){
+background:#d8d8d8
+
+
+}
+ul li:hover{
+    transform: translateY(-4px);
+}
+
+
+li p{
+    flex-grow: 1;
+    letter-spacing: 0.1rem;
+   
+}
+
+li i {
+    color:#f32648;
+    font-size: 1.5rem;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  
+
+}
+li i:hover{
+    transform:scale(1.2)
+}
+
+li.done{
+    background: #ffe6ea !important;
+}
+li.done p {
+    text-decoration: line-through;
+    color:#ee0e33;
+}
+
+
+
+
+@media screen and (max-width:576px){
+    header{
+        font-size: 2rem;
+    }
+}
