@@ -66,7 +66,7 @@ if(e.target.classList.contains("fa-check")){
 }else if(e.target.classList.contains("fa-trash")){
     e.target.parentElement.remove();
 
-todos = todos.filter((todo) => todo.id !== id)
+todos = todos.filter((todo) => todo.id != id)
 
 localStorage.setItem("TODOS", JSON.stringify(todos));
 }
